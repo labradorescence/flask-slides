@@ -10,7 +10,7 @@ slides:
   theme: sky
   # Choose a code highlighting style (see Hugo docs on Chroma)
   #   Light style: github-light. Dark style: dracula (default).
-  highlight_style: dracula
+  highlight_style: github-light
 ---
 
 # Create slides in Markdown with Wowchemy
