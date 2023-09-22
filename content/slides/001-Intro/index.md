@@ -1,13 +1,13 @@
 ---
 title: Intro to Flask
-summary: An introduction to Flask
+summary: An introduction lecture to Flask
 authors: []
 tags: ['Tutorials']
 categories: []
-date: '2013-09-22'
+date: '2023-09-22'
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
-  theme: black
+  theme: sky
   # Choose a code highlighting style (see Hugo docs on Chroma)
   #   Light style: github-light. Dark style: dracula (default).
   highlight_style: dracula
