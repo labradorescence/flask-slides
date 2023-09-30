@@ -19,26 +19,18 @@ slides:
 - Review Web Servers and WSGI/Werkzeug
 - Demonstrate How to Initialize a Flask Application
 - Demonstrate Flask Routing and Views
+
+## Learning Goals
 - Review Context
     - Request Hooks
     - Demonstrate Creating a Response
         - Status Codes 
     - Demonstrate Accessing URL Params
+
+## Learning Goals
 - Demonstrate Flask SQLAlchemy
     - Review Models
     - Demonstrate Migrating in Flask
     - Demonstrate Seeding
     - Demonstrate Querying / Serving Resources
     - Demonstrate the Flask Shell
-- Stretch Goal:
-    - Demonstrate Web Scraping 
-
-## Lecture Topics
-- How the Web Works
-- Web Servers
-- Creating a Flask Application
-- Flask Routing and Views 
-- Flask Application Structure
-- SQLAlechmy in Flask
-- Stretch Topic: 
-    - Web Scraping
