@@ -20,12 +20,18 @@ slides:
 - Demonstrate How to Initialize a Flask Application
 - Demonstrate Flask Routing and Views
 
+---
+
 ## Learning Goals
 - Review Context
     - Request Hooks
     - Demonstrate Creating a Response
         - Status Codes 
     - Demonstrate Accessing URL Params
+
+
+---
+
 
 ## Learning Goals
 - Demonstrate Flask SQLAlchemy
