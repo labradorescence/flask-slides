@@ -34,3 +34,9 @@ slides:
     - Demonstrate Seeding
     - Demonstrate Querying / Serving Resources
     - Demonstrate the Flask Shell
+
+
+---
+
+
+{{< figure src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*pSHwGTsBYsaPpN02FK5NIA.png" >}}
