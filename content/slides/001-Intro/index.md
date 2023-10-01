@@ -50,18 +50,20 @@ slides:
 
 ---
 
-## What is an API (Application Programming Interface):
+## What is an API 
+(Application Programming Interface):
 - Facilitates communication and interaction between software components or systems.
 - Can be used for both internal (within a single application) and external (between separate applications) communication, not limited to web-based interactions.
 
 ---
 
-## What is a Web API (Web Application Programming Interface):
+## What is a Web API 
+(Web Application Programming Interface):
 - Specifically designed for remote access to web-based services and resources.
 - Accessible over the internet using standard web protocols such as HTTP, commonly used for providing data and functionality to external applications, websites, and mobile apps.
 
 
---
+---
 
 {{< figure src="https://miro.medium.com/v2/resize:fit:1372/format:webp/1*-IrjezfdqfpO1WSwkU-E6A.png" >}}
 
