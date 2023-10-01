@@ -28,6 +28,21 @@ slides:
 
 ---
 
+
+## What is an API 
+(Application Programming Interface):
+- Facilitates communication and interaction between software components or systems.
+- Can be used for both internal (within a single application) and external (between separate applications) communication, not limited to web-based interactions.
+
+---
+
+## What is a Web API 
+(Web Application Programming Interface):
+- Specifically designed for remote access to web-based services and resources.
+- Accessible over the internet using standard web protocols such as HTTP, commonly used for providing data and functionality to external applications, websites, and mobile apps.
+
+---
+
 #### What is Request-Response Cycle?
 
 {{< figure src="https://cdn-images-1.medium.com/max/1600/1*Bqctt72kLrkmHzm8qAQfwQ.png" >}}
@@ -47,20 +62,6 @@ slides:
 - Sends a response back to the client
 - Uses HTTP protocols to respond to requests
 - Changes in data may be triggered by the client, but the actual change is handled by the server side
-
----
-
-## What is an API 
-(Application Programming Interface):
-- Facilitates communication and interaction between software components or systems.
-- Can be used for both internal (within a single application) and external (between separate applications) communication, not limited to web-based interactions.
-
----
-
-## What is a Web API 
-(Web Application Programming Interface):
-- Specifically designed for remote access to web-based services and resources.
-- Accessible over the internet using standard web protocols such as HTTP, commonly used for providing data and functionality to external applications, websites, and mobile apps.
 
 
 ---
