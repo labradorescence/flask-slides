@@ -66,6 +66,13 @@ slides:
 
 ---
 
+## What is Flask?
+- Flask is a web framework for Python. 
+- lightweight and easy to use.
+- Flask is well-suited for RESTful APIs.
+
+---
+
 {{< figure src="https://miro.medium.com/v2/resize:fit:1372/format:webp/1*-IrjezfdqfpO1WSwkU-E6A.png" >}}
 
 ---
