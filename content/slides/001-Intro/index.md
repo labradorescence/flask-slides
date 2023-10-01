@@ -14,6 +14,8 @@ slides:
 ---
 
 ## Intro to Flask
+{{< figure src="https://miro.medium.com/v2/resize:fit:1280/format:webp/1*XzIRJGujfqAiOV2EIQgR_Q.png" >}}
+
 
 ---
 
