@@ -1,13 +1,13 @@
 ---
-title: Example Slides
-summary: An introduction to using Wowchemy's Slides feature.
+title: auth
+summary: auth
 authors: []
 tags: ['Tutorials']
 categories: []
 date: '2019-02-05'
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
-  theme: black
+  theme: sky
   # Choose a code highlighting style (see Hugo docs on Chroma)
   #   Light style: github-light. Dark style: dracula (default).
   highlight_style: dracula
