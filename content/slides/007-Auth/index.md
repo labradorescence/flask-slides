@@ -13,159 +13,85 @@ slides:
   highlight_style: dracula
 ---
 
-# Create slides in Markdown with Wowchemy
-
-[Wowchemy](https://wowchemy.com/) | [Documentation](https://wowchemy.com/docs/content/slides/)
+title: '05_auth_one'
 
 ---
 
-## Features
-
-- Efficiently write slides in Markdown
-- 3-in-1: Create, Present, and Publish your slides
-- Supports speaker notes
-- Mobile friendly slides
+# Authorization
 
 ---
 
-## Controls
-
-- Next: `Right Arrow` or `Space`
-- Previous: `Left Arrow`
-- Start: `Home`
-- Finish: `End`
-- Overview: `Esc`
-- Speaker notes: `S`
-- Fullscreen: `F`
-- Zoom: `Alt + Click`
-- [PDF Export](https://revealjs.com/pdf-export/)
+Authentication: verifying identity <br />
+Authorization: Users' access rights
 
 ---
 
-## Code Highlighting
+## Cookies
 
-Inline code: `variable`
+- memory IN YOUR BROWSER (client side) to track information about users
+- can or can not persist
+- ex. tracking ad information, keeping user logged in, seeing how many articles you've read on some site
+- you can see cookies created in developer tools
 
-Code block:
-
-```python
-porridge = "blueberry"
-if porridge == "blueberry":
-    print("Eating...")
-```
-
----
-
-## Math
-
-In-line math: $x + y = z$
-
-Block math:
-
-$$
-f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
-$$
+<aside class="notes">
+- best for things not important to user security
+</aside>
 
 ---
 
-## Fragments
+## Sessions
 
-Make content appear incrementally
+- stores user information ON THE SERVER SIDE
+- information is encrypted
+- info is only ever unencrypted on server side 
+- Note: `db.session()` (opening up ability to add info to database) is different than browser sessions (place to store info about user, etc.)
 
-```
-{{</* fragment */>}} $\mathbf{y} =  $ {{</* /fragment */>}}
-{{</* fragment */>}} $X\boldsymbol\beta$ {{</* /fragment */>}}
-{{</* fragment */>}} $+ \boldsymbol\varepsilon$ {{</* /fragment */>}}
-```
-
-Press `Space` to play!
-
-{{< fragment >}} $\mathbf{y} =  $ {{< /fragment >}}
-{{< fragment >}} $X\boldsymbol\beta$ {{< /fragment >}}
-{{< fragment >}} $+ \boldsymbol\varepsilon$ {{< /fragment >}}
+<aside class="notes">
+The read-only sessionStorage property accesses a session Storage object for the current origin. sessionStorage is similar to localStorage; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.<br />
+sessionStorage only stored for current session (deleted after closing browser), cookies can persist
+</aside>
 
 ---
 
-A fragment can accept two optional parameters:
+## What We'll Be Doing
 
-- `class`: use a custom style (requires definition in custom CSS)
-- `weight`: sets the order in which a fragment appears
+- Keep a state in `App.js` that will save current user
+- if `user` has an object containing a `username` no one is logged in
+- Store user in sessions
 
----
-
-## Speaker Notes
-
-Add speaker notes to your presentation
-
-```markdown
-{{%/* speaker_note */%}}
-
-- Only the speaker can read these notes
-- Press `S` key to view
-
-{{%/* /speaker_note */%}}
-```
-
-Press the `S` key to view the speaker notes!
-
-{{< speaker_note >}}
-
-- Only the speaker can read these notes
-- Press `S` key to view
-
-{{< /speaker_note >}}
+1. `/login`: logs in a user by finding user in database and setting sessions
+2. `/logout`: logs out a user by clearing session
+3. `/authorized-session`: checks if someone is already logged in via sessions
+4. `/user`: signs up new user by creating a new entry in database
 
 ---
 
-## Themes
+## Signing Up
 
-- black: Black background, white text, blue links (default)
-- white: White background, black text, blue links
-- league: Gray background, white text, blue links
-- beige: Beige background, dark text, brown links
-- sky: Blue background, thin dark text, blue links
+1. create a `POST` resource for `User` (`/user`)
+2. on `POST`, create a new user and save to database
+3. save new user in sessions and React state so user is automatically logged in
 
 ---
 
-- night: Black background, thick white text, orange links
-- serif: Cappuccino background, gray text, brown links
-- simple: White background, black text, blue links
-- solarized: Cream-colored background, dark green text, blue links
+## Logging In
+
+1. create a custom `POST` route so we can send a payload with user login information (`/user`) (we won't actually be adding anything to the database)
+2. check if user exists in database
+3. if it does, set session and React state to the user
 
 ---
 
-{{< slide background-image="boards.webp" >}}
+## Logging Out
 
-## Custom Slide
-
-Customize the slide style and background
-
-```markdown
-{{</* slide background-image="boards.webp" */>}}
-{{</* slide background-color="#0000FF" */>}}
-{{</* slide class="my-style" */>}}
-```
+1. create a custom route
+2. clear user information from session and React state
 
 ---
 
-## Custom CSS Example
+## Keeping the user logged in 
 
-Let's make headers navy colored.
+1. create custom route `/authorized-session`
+2. check if there is a user stored in session
+3. if there is, send to front end and update React state
 
-Create `assets/css/reveal_custom.css` with:
-
-```css
-.reveal section h1,
-.reveal section h2,
-.reveal section h3 {
-  color: navy;
-}
-```
-
----
-
-# Questions?
-
-[Ask](https://discord.gg/z8wNYzb)
-
-[Documentation](https://wowchemy.com/docs/content/slides/)
